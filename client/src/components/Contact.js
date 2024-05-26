@@ -34,7 +34,7 @@ export const Contact = () => {
         }
         else{
             setButtonTextt("Sending...");
-            let response=await fetch("http://localhost:5000/contact",{
+            let response=await fetch("https://portfolio-deploy-9zuz.onrender.com/contact",{
                 method:"POST",
                 headers:{
                     "Content-Type":"Application/json"
