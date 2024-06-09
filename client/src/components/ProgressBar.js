@@ -22,7 +22,6 @@ export const ProgressBar = ({percentage,Icon}) => {
     html: FaHtml5,
   }
   const SelectedIcon=Icons[Icon]
-  console.log(percentage,Icon)
   return (
 
 <CircularProgressbarWithChildren value={percentage}>

@@ -13,16 +13,22 @@ export const Projects = () => {
           title: "A simple store",
           description: "Buy the unique electroinics items",
           imgUrl: projImg3,
+          site:"https://e-commerce-with-backend-1.onrender.com/",
+          fullStack:true
         },
         {
           title: "My Chat",
           description: "Real time chat with your loved ones",
           imgUrl: projImg1,
+          site:"https://chat-deploy-t6or.onrender.com",
+          fullStack:true,
         },
         {
           title: "Travel",
           description: "Find the tour package for your next generation",
           imgUrl: projImg2,
+          site:"https://new-travel-1.onrender.com/",
+          fullStack:false
         },
       ];
   return (
@@ -55,7 +61,7 @@ export const Projects = () => {
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
-                                <Tab.Pane eventKey="first">
+                                <Tab.Pane eventKey="All">
                                     <Row>
                                         {
                                             projects.map((project,index)=>{
@@ -66,8 +72,18 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                        Lorem Impsum
+                                <Tab.Pane eventKey="Full stack">
+                                <Row>
+                                        {
+                                            projects.map((project,index)=>{
+                                                if(project.fullStack){
+                                                    return(
+                                                    <ProjectCard key={index} {...project} />
+                                                )
+                                                }
+                                            })
+                                        }
+                                    </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
                                 Lorem Impsum
