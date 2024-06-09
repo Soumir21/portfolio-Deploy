@@ -40,23 +40,22 @@ export const Projects = () => {
                 {({isVisible})=>
                 <div className={isVisible ? "animate__animated animate__slideInUp":""}>
                 <h2>Projects</h2>
-                    <p>orem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                         Ut enim ad minim veniam, </p>
+                    <p>Explore my diverse portfolio showcasing both full-stack and front-end projects, 
+                    highlighting my expertise in creating dynamic, responsive, and user-friendly web applications. </p>
                         
                 </div>}
                 </TrackVisibility>
-                <Tab.Container id="projects-tab" defaultActiveKey="first" >
+                <Tab.Container id="projects-tab" defaultActiveKey="All" >
                          <Nav variant="pills" className='nav-pills mb-5 justify-content-cente align-items-center' id='pills-tab'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab one</Nav.Link>
+                                    <Nav.Link eventKey="All">All</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                                    <Nav.Link eventKey="Full_stack">Full stack</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third" >
-                                    Tab Three
+                                    <Nav.Link eventKey="Front" >
+                                    Front End
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>
@@ -72,7 +71,7 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="Full stack">
+                                <Tab.Pane eventKey="Full_stack">
                                 <Row>
                                         {
                                             projects.map((project,index)=>{
@@ -85,8 +84,8 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="third">
-                                Lorem Impsum
+                                <Tab.Pane eventKey="Front">
+                                <ProjectCard {...projects[2]} />
                                 </Tab.Pane>
                             </Tab.Content>
                 </Tab.Container>

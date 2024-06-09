@@ -61,10 +61,7 @@ export const Contact = () => {
     <section className='contact' id='contact'>
         <Container>
             
-            <TrackVisibility
-            >
-                {({isVisible})=>
-                <div className={isVisible ? "animate__animated animate__zoomIn":""}>
+           
                 <Row  className='align-items-center'>
                 <Col md={6}>
                     <img src={contactImg} alt='Contact Use' />
@@ -111,8 +108,8 @@ export const Contact = () => {
                 </Col>
                 </Row>
 
-                </div>}
-            </TrackVisibility>
+                
+          
         </Container>
     </section>
   )
